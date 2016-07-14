@@ -11,3 +11,5 @@ link-checker-results.txt
 !systemjs.config.js
 !typings/typings.d.ts
 !wallaby.js
+
+app/*.log
