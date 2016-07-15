@@ -3,9 +3,7 @@ import { CarPartsComponent} from './car-parts.component';
 
 @Component({
   selector: 'functions-pipes-app',
-  template: `
-  <h1>{{heading}}</h1>
-  <car-parts></car-parts>`,
+  templateUrl: 'app/app.component.html',
   directives: [CarPartsComponent]
 
 })
