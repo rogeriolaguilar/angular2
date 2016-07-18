@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'car-parts',
+  styleUrls: ['app/car-parts.component.css'],
   templateUrl: 'app/car-parts.component.html'
 })
 
