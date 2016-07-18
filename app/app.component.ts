@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { CarPartsComponent} from './car-parts.component';
+import { RacesComponent} from './races.component';
 
 @Component({
-  selector: 'functions-pipes-app',
+  selector: 'races-app',
   templateUrl: 'app/app.component.html',
-  directives: [CarPartsComponent]
+  directives: [RacesComponent]
 
 })
 export class AppComponent {
   heading = "Ultra Racing Schedule";
+  
 }
 
