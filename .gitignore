@@ -13,3 +13,4 @@ link-checker-results.txt
 !wallaby.js
 
 app/*.log
+.vscode
