@@ -16,14 +16,23 @@ export class RacesComponent {
   }
 
   totalCost() {
-    let cost = 0;
+    let cost = 0
     for (let race of this.races) {
       if (race.isRacing) {
-        cost += race.entryFee;
+        cost += race.entryFee
       }
     }
     return cost;
   }
-  
+
+  enterRace(race: Race) {
+    console.debug("click enter button to race name: " + race.name)
+    race.isRacing = true
+  }
+
+  cancelRace(race: Race) {
+    console.debug("click exit button to race name: " + race.name)
+    race.isRacing = false
+  }
 
 }
