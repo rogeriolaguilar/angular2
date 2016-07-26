@@ -1,5 +1,6 @@
 <ul class="race">
-  <h2>Total cost of selected races: {{totalCost() | currency:'BRL':true}}</h2>
+  <h3>Money available: R$<input type="number" min="0" [(ngModel)]="cash" > </h3>
+  <h3>Total cost of selected races: {{totalCost() | currency:'BRL':true}}</h3>
   <li *ngFor="let race of races" [class.racing]="race.isRacing">
     <table>
       <tr>
@@ -7,13 +8,12 @@
           <img [src]="race.image">
         </td>
         <td>
-          <h2>{{race.name}} {{race.entryFee | currency:'USD':true}}</h2>
+          <h2>{{race.name}} {{race.entryFee | currency:'BRL':true}}</h2>
           <p>{{race.date | date:'MMM d, y, h:MM a'}}</p>
           <p>{{race.about}}</p>
 
-          <button (click)="enterRace(race)"  *ngIf="!race.isRacing">Buy Race</button>
-          <button (click)="cancelRace(race)"  *ngIf="race.isRacing">Cancel</button> 
-
+          <button (click)="enterRace(race)" *ngIf="!race.isRacing">Buy Race</button>
+          <button (click)="cancelRace(race)" *ngIf="race.isRacing">Cancel</button>
         </td>
       </tr>
     </table>

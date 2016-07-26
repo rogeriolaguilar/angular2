@@ -10,6 +10,7 @@ import { RACES } from './mocks'
 
 export class RacesComponent {
   races: Race[];
+  cash = 5000;
 
   ngOnInit() {
     this.races = RACES;
@@ -26,8 +27,13 @@ export class RacesComponent {
   }
 
   enterRace(race: Race) {
-    console.debug("click enter button to race name: " + race.name)
-    race.isRacing = true
+    console.debug("click enter button name: " + race.name)
+    let minToEnter = this.totalCost()+race.entryFee
+    if (minToEnter > this.cash) {
+      alert("You need more money! You "+this.cash+" but you need "+minToEnter)
+    } else {
+      race.isRacing = true
+    }
   }
 
   cancelRace(race: Race) {
