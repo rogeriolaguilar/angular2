@@ -1,19 +1,23 @@
 import { Component } from '@angular/core';
 import { Race } from './race';
-import { RACES } from './mocks'
+import { RacesService } from './races.service'
 
 @Component({
   selector: 'races',
   styleUrls: ['app/races.component.css'],
-  templateUrl: 'app/races.component.html'
+  templateUrl: 'app/races.component.html',
+  providers: [RacesService]
 })
 
 export class RacesComponent {
+
+  constructor(private racesService: RacesService) { }
+
   races: Race[];
   cash = 5000;
 
   ngOnInit() {
-    this.races = RACES;
+    this.races = this.racesService.getRaces();
   }
 
   totalCost() {
