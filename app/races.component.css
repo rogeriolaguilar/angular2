@@ -1,13 +1,42 @@
 h3 {
     color: darkslateblue
 }
-button {
-    color: darkblue
+
+input[type="number"] {
+   background-color: #216288;
+   border: 1px solid #17445E;
+   display: inline-block;
+   cursor: hand;
+   color: #FFFFFF;
+   border-radius: 20; 
+   padding: 3px 6px;
+   text-decoration: none;
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;  
+  cursor: hand;
+}
+
 .racing{
-    background-color: aqua
+    background-color: #216288;
 }
 
 .race{
     list-style: none;
+    
 }
+li{
+    background-color: lightblue;
+}
+
